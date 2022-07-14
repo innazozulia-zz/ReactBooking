@@ -1,0 +1,44 @@
+.navbar {
+    background: #1c56a8;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.nav__items {
+    padding: 5px 10px;
+}
+
+.register {
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.register:hover,
+.login:hover {
+    transform: scale(1.1);
+}
+
+.login {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
