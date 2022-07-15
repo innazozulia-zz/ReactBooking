@@ -7,12 +7,14 @@
 }
 
 .search__item,
+.search__item__date,
 .search__input_place {
     border: 3px solid #fbd1a2;
     border-radius: 5px;
 }
 
-.search__item {
+.search__item,
+.search__item__date {
     width: 100%;
     padding: 10px;
 }
@@ -44,4 +46,72 @@
 .search__btn:hover {
     background: #024095;
     transform: background 3s ease-in-out;
+}
+
+.search__item__date {
+    position: relative;
+}
+
+.date__text {
+    color: grey;
+    font-size: 11px;
+    padding: 5px;
+}
+
+.search__date {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+}
+
+.search__description {
+    font-size: 15px;
+    padding: 5px;
+    color: grey
+}
+
+.options {
+    position: absolute;
+    background: white;
+    top: 42px;
+    left: 0;
+    border: 1px solid #fbd1a2;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.count__number__adult,
+.count__number__children,
+.count__number__room {
+    margin: 0 10px;
+}
+
+.search__item__room {
+    position: relative;
+    border: 3px solid #fbd1a2;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.option__count_minus,
+.option__count_plus {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    /* background: #5995ea; */
+    border-radius: 5px;
+}
+
+.option__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.option__item {
+    display: flex;
+    justify-content: space-between;
 }
