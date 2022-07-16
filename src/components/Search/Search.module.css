@@ -50,6 +50,7 @@
 
 .search__item__date {
     position: relative;
+    z-index: 2;
 }
 
 .date__text {
@@ -96,6 +97,7 @@
     border-radius: 5px;
     width: 100%;
     padding: 10px;
+    z-index: 2;
 }
 
 .option__count_minus,
@@ -114,4 +116,14 @@
 .option__item {
     display: flex;
     justify-content: space-between;
+}
+
+.checkbox {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 10px;
 }

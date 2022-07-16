@@ -67,12 +67,10 @@ function Search() {
             />
           )}
         </div>
-        <div
-          className={style.search__item__room}
-          onClick={() => setOpenOptions(!openOptions)}
-        >
+        <div className={style.search__item__room}>
           <FaUserAlt className={style.serach__icon} />
           <span
+            onClick={() => setOpenOptions(!openOptions)}
             className={style.search__description}
           >{`${options.adult} adult ${options.children} children ${options.room} room`}</span>
           {openOptions && (
@@ -81,6 +79,7 @@ function Search() {
                 <span className={style.option__text}>Adult</span>
                 <div className={style.option__counter}>
                   <button
+                    disabled={options.adult <= 1}
                     className={style.option__count_minus}
                     onClick={() => handleOption("adult", "d")}
                   >
@@ -101,6 +100,7 @@ function Search() {
                 <span className={style.option__text}>Children</span>
                 <div className={style.option__counter}>
                   <button
+                    disabled={options.children <= 0}
                     className={style.option__count_minus}
                     onClick={() => handleOption("children", "d")}
                   >
@@ -121,6 +121,7 @@ function Search() {
                 <span className={style.option__text}>Room</span>
                 <div className={style.option__counter}>
                   <button
+                    disabled={options.room <= 1}
                     className={style.option__count_minus}
                     onClick={() => handleOption("room", "d")}
                   >
@@ -141,6 +142,10 @@ function Search() {
           )}
         </div>
         <button className={style.search__btn}>Search</button>
+      </div>
+      <div className={style.checkbox}>
+        <input type="checkbox"></input>
+        <label>I'm travelling for work</label>
       </div>
     </div>
   );

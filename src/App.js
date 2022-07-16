@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Hotel from "./components/Hotel/Hotel";
 import List from "./components/List/List";
