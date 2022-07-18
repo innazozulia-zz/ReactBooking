@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav";
 import Header from "../Header/Header";
 import Search from "../Search/Search";
 import Feature from "../Feature/Feature";
+import TypeResort from "../TypeResort/TypeResort";
 
 import axios from "axios";
 
@@ -10,35 +11,29 @@ import style from "./Main.module.css";
 
 function Main() {
   const [featured, setFeatured] = React.useState([]);
-  // const featured = [
-  //   {
-  //     id: 1,
-  //     country: "UK",
-  //     сity: "London",
-  //     property: "453",
-  //   },
-  //   {
-  //     id: 2,
-  //     country: "UKjhjjkg",
-  //     сity: "dddd",
-  //     property: "111",
-  //   },
-  // ];
+  const [resorts, setResort] = React.useState([]);
 
   React.useEffect(() => {
     axios
       .get("https://62cdc7e0066bd2b6992c3054.mockapi.io/fetured")
       .then(function (response) {
         setFeatured(response.data);
-        console.log(response.data);
-        console.log(featured);
       });
+    // axios
+    //   .get("https://62cdc7e0066bd2b6992c3054.mockapi.io/resorts")
+    //   .then(function (response) {
+    //     setResort(response.data);
+    //     console.log(response.data);
+    //   });
+  }, []);
 
-    // .then(function (response) {
-    //   // console.log(response);
-    // });
-
-    // });
+  React.useEffect(() => {
+    axios
+      .get("https://62cdc7e0066bd2b6992c3054.mockapi.io/resorts")
+      .then(function (response) {
+        setResort(response.data);
+        console.log(response.data);
+      });
   }, []);
 
   return (
@@ -46,16 +41,27 @@ function Main() {
       <Nav />
       <Header />
       <Search />
-
-      {featured.map((obj) => (
-        <Feature
-          key={obj.id}
-          city={obj.city}
-          property={obj.property}
-          country={obj.country}
-        />
-      ))}
-      {/* {featured && <Feature id={id} city={city} property={property} />} */}
+      <div className={style.main__container}>
+        {featured.map((obj) => (
+          <Feature
+            key={obj.id}
+            image={obj.image}
+            property={obj.property}
+            country={obj.country}
+          />
+        ))}
+        <h2>Browse by property type</h2>
+        <div className={style.resort___container}>
+          {resorts.map((resort) => (
+            <TypeResort
+              key={resort.id}
+              image={resort.image}
+              title={resort.title}
+              description={resort.description}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

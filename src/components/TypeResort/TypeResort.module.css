@@ -1,0 +1,14 @@
+.resort__img {
+    max-width: 190px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* .resort__item {
+    gap: 10px;
+} */
+
+.resort__item:not(:last-child) {
+    margin-right: 15px;
+}

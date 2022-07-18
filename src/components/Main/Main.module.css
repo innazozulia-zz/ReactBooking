@@ -1,0 +1,16 @@
+.main__container {
+    max-width: 1020px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: center; */
+}
+
+.resort___container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+}

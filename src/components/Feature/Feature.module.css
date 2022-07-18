@@ -17,6 +17,10 @@
     z-index: 1;
 }
 
+.featured__container:hover {
+    cursor: pointer;
+}
+
 .featured__item {
     position: relative;
     background: white;
