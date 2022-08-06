@@ -8,7 +8,7 @@ function TypeResort({ image, title, description }) {
       <div className={style.resort__item}>
         <img className={style.resort__img} src={image} alt="resort" />
         <h2 className={style.resort__type}>{title}</h2>
-        <p>{description}</p>
+        <p className={style.description}>{description}</p>
       </div>
     </>
   );

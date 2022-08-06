@@ -1,0 +1,12 @@
+.popural__cover {
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.popular__items {
+    display: flex;
+
+    margin-right: 10px;
+}

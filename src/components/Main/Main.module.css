@@ -4,7 +4,7 @@
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 20px;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .resort___container {
@@ -12,5 +12,24 @@
     max-width: 1024px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     /* flex-direction: row; */
+}
+
+.mostPopular__container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (max-width: 1090px) {
+    .title {
+        display: none;
+    }
+
 }

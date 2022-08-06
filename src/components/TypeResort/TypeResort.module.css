@@ -5,6 +5,21 @@
     border-radius: 10px;
 }
 
+.resort__type {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.description {
+    padding: 0 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
 /* .resort__item {
     gap: 10px;
 } */

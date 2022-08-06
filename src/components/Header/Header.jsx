@@ -3,6 +3,7 @@ import { FaBed } from "react-icons/fa";
 import { ImAirplane } from "react-icons/im";
 import { AiFillCar } from "react-icons/ai";
 import { FaTaxi } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import style from "./Header.module.css";
 
@@ -11,23 +12,31 @@ function Header() {
     <div className={style.header}>
       <div className={style.header__container}>
         <div className={style.header__list}>
-          <div className={style.header__item}>
-            <FaBed className={style.header__icon} />
+          <Link className={style.link} to="/hotels">
+            <div className={style.header__item}>
+              <FaBed className={style.header__icon} />
+              <span>Hotel</span>
+            </div>
+          </Link>
+          <Link className={style.link} to="/flight">
+            <div className={style.header__item}>
+              <ImAirplane className={style.header__icon} />
+              <span>Flight</span>
+            </div>
+          </Link>
 
-            <span>Hotel</span>
-          </div>
-          <div className={style.header__item}>
-            <ImAirplane className={style.header__icon} />
-            <span>Flight</span>
-          </div>
-          <div className={style.header__item}>
-            <AiFillCar className={style.header__icon} />
-            <span>Rent Car</span>
-          </div>
-          <div className={style.header__item}>
-            <FaTaxi className={style.header__icon} />
-            <span>Transfer</span>
-          </div>
+          <Link className={style.link} to="/rentcar">
+            <div className={style.header__item}>
+              <AiFillCar className={style.header__icon} />
+              <span>Rent Car</span>
+            </div>
+          </Link>
+          <Link className={style.link} to="/transfer">
+            <div className={style.header__item}>
+              <FaTaxi className={style.header__icon} />
+              <span>Transfer</span>
+            </div>
+          </Link>
         </div>
         <div>
           <h1 className={style.header__title}>Find your next stay</h1>

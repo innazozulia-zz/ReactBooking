@@ -22,6 +22,7 @@
 .search__container {
     max-width: 780px;
     margin: 0 auto;
+
 }
 
 .search__input_place {
@@ -126,4 +127,27 @@
 
 .checkbox label {
     margin-left: 10px;
+}
+
+
+@media screen and (max-width: 870px) {
+    .search__list {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .checkbox {
+        position: absolute;
+        bottom: 58px;
+        left: 14px;
+    }
+
+    .search__container {
+        position: relative;
+        margin-bottom: 140px;
+    }
+
+    .search__btn {
+        margin-top: 20px;
+    }
 }

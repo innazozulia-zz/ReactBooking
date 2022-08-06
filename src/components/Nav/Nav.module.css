@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+.link__logo {
+    text-decoration: none;
+    color: white;
+}
+
 .nav__container {
     width: 100%;
     max-width: 1020px;
