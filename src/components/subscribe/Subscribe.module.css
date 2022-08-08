@@ -1,0 +1,41 @@
+.subscribe__title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.subscribe__container {
+    padding-top: 140px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.subscribe__container p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 10px 0;
+    width: 70px;
+    background: #4085e5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input__container {
+    margin-bottom: 30px;
+}
+
+.checkbox {
+    color: #fff;
+
+}

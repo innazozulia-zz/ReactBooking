@@ -19,6 +19,15 @@
 .mostPopular__container {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 10px;
+    /* justify-content: center;
+    display: flex; */
+}
+
+.connect__container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .title {
@@ -27,9 +36,34 @@
     text-align: center;
 }
 
+.mostPopular__title,
+.connect__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.subscribe__container {
+    width: 100%;
+    background: #1d56a7;
+    text-align: center;
+    margin-top: 40px;
+    height: 500px;
+}
+
 @media screen and (max-width: 1090px) {
     .title {
         display: none;
     }
 
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .mostPopular__title,
+    .connect__title {
+        display: flex;
+        justify-content: center;
+    }
 }
